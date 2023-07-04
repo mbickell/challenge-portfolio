@@ -1,0 +1,34 @@
+@use "../../styles/variables";
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: variables.$spacing-small;
+
+  @include variables.tablet-query {
+    padding: variables.$spacing-large;
+  }
+
+  @include variables.tablet-query {
+    padding: variables.$spacing-xlarge;
+  }
+
+  .error {
+    border: 1px solid variables.$grey;
+    border-radius: variables.$border-radius-large;
+    padding: variables.$spacing-large;
+    width: 100%;
+
+    @include variables.tablet-query {
+      width: 90%;
+    }
+
+    @include variables.desktop-query {
+      width: 75%;
+    }
+
+    &__message {
+      line-height: variables.$line-height-expanded;
+    }
+  }
+}
