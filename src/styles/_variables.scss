@@ -1,0 +1,33 @@
+$desktop: 992px;
+$tablet: 768px;
+
+@mixin tablet-query {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop-query {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+// colors
+$grey: #d3d3d3;
+$black: #000000;
+$white: #ffffff;
+
+// spacing
+$spacing-xsmall: 2.5px;
+$spacing-small: 5px;
+$spacing-medium: 10px;
+$spacing-large: 20px;
+$spacing-xlarge: 40px;
+
+// border
+$border-radius-large: 15px;
+$border-radius-small: 5px;
+
+// text
+$line-height-expanded: 1.5;
