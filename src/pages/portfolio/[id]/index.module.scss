@@ -1,0 +1,17 @@
+@use "../../../styles/variables";
+
+.portfolio {
+  padding: variables.$spacing-medium;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  @include variables.tablet-query {
+    padding: variables.$spacing-large;
+  }
+
+  @include variables.tablet-query {
+    padding: variables.$spacing-xlarge;
+  }
+}

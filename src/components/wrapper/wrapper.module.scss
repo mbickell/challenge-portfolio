@@ -1,0 +1,12 @@
+@use "../../styles/variables";
+
+.wrapper {
+  border: 1px solid variables.$grey;
+  border-radius: variables.$border-radius-large;
+  padding: variables.$spacing-large;
+  width: 100%;
+
+  @include variables.desktop-query {
+    max-width: 1024px;
+  }
+}

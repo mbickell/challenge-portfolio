@@ -1,0 +1,18 @@
+@use "../../styles/variables";
+
+.header {
+  margin-bottom: variables.$spacing-medium;
+
+  &__title {
+    font-size: variables.$font-size-large;
+  }
+
+  &__text {
+    font-size: variables.$font-size-medium;
+  }
+
+  &__valuation {
+    font-size: variables.$font-size-medium;
+    font-weight: variables.$font-weight-bold;
+  }
+}

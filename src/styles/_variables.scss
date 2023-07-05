@@ -17,6 +17,8 @@ $tablet: 768px;
 $grey: #d3d3d3;
 $black: #000000;
 $white: #ffffff;
+$positive: #008000;
+$negative: #ff0000;
 
 // spacing
 $spacing-xsmall: 2.5px;
@@ -26,8 +28,16 @@ $spacing-large: 20px;
 $spacing-xlarge: 40px;
 
 // border
+$border-radius-round: 50px;
 $border-radius-large: 15px;
 $border-radius-small: 5px;
 
 // text
 $line-height-expanded: 1.5;
+
+$font-size-small: 12px;
+$font-size-medium: 16px;
+$font-size-large: 20px;
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
