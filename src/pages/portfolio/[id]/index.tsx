@@ -7,6 +7,7 @@ import { Header } from "@/components/header/header";
 import styles from "./index.module.scss";
 import { PortfolioHoldings } from "@/components/portfolioHolidings/portfolioHoldings";
 import { getValuationFromHoldings } from "@/helpers/holdings";
+import Head from "next/head";
 
 export const getServerSideProps: GetServerSideProps<{
   portfolio: Portfolio;
@@ -31,13 +32,18 @@ const PortfolioPage: React.FC<
   }
 
   return (
-    <main className={styles.portfolio}>
-      <Header
-        title={portfolio.name}
-        valuation={getValuationFromHoldings(portfolio.holdings)}
-      />
-      <PortfolioHoldings holdings={portfolio.holdings} />
-    </main>
+    <>
+      <Head>
+        <title>{portfolio.name}</title>
+      </Head>
+      <main className={styles.portfolio}>
+        <Header
+          title={portfolio.name}
+          valuation={getValuationFromHoldings(portfolio.holdings)}
+        />
+        <PortfolioHoldings holdings={portfolio.holdings} />
+      </main>
+    </>
   );
 };
 

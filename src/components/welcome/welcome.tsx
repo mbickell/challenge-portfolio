@@ -20,6 +20,18 @@ export const Welcome: FunctionComponent = () => {
       >
         View portfolio mock data
       </Link>
+
+      <p>
+        Below you will find the links to the completed pages of the technical
+        assessment:
+      </p>
+
+      <Link href="/portfolio/1" className={styles.welcome__apiUrl}>
+        View completed portfolio page
+      </Link>
+      <Link href="/portfolio/123" className={styles.welcome__apiUrl}>
+        View portfolio not found page
+      </Link>
     </div>
   );
 };
