@@ -3,6 +3,7 @@
 .holdings {
   border-radius: 0 0 variables.$border-radius-large
     variables.$border-radius-large;
+  border-top: 0;
   overflow-x: auto;
 
   .table {
