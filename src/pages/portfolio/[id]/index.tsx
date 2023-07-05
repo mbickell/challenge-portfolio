@@ -6,6 +6,7 @@ import NotFound from "./404";
 import { Header } from "@/components/header/header";
 import styles from "./index.module.scss";
 import { PortfolioHoldings } from "@/components/portfolioHolidings/portfolioHoldings";
+import { getValuationFromHoldings } from "@/helpers/holdings";
 
 export const getServerSideProps: GetServerSideProps<{
   portfolio: Portfolio;
@@ -31,7 +32,10 @@ const PortfolioPage: React.FC<
 
   return (
     <main className={styles.portfolio}>
-      <Header title={portfolio.name} valuation="£10,276.00" />
+      <Header
+        title={portfolio.name}
+        valuation={getValuationFromHoldings(portfolio.holdings)}
+      />
       <PortfolioHoldings holdings={portfolio.holdings} />
     </main>
   );
