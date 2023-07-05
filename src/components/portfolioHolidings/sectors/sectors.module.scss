@@ -1,0 +1,22 @@
+@use "../../../styles/variables";
+
+.sectors {
+  border-radius: 0;
+  &__title {
+    font-size: variables.$font-size-large;
+    font-weight: variables.$font-weight-normal;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: variables.$spacing-medium;
+  }
+}
+
+.tag {
+  background-color: variables.$grey;
+  padding: variables.$spacing-medium variables.$spacing-large;
+  border-radius: variables.$border-radius-round;
+  font-size: variables.$font-size-large;
+}

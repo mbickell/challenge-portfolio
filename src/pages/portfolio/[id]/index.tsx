@@ -35,7 +35,7 @@ const PortfolioPage: React.FC<
   return (
     <main className={styles.portfolio}>
       <Header title={portfolio.name} valuation="£10,276.00" />
-      <PortfolioHoldings />
+      <PortfolioHoldings holdings={portfolio.holdings} />
     </main>
   );
 };

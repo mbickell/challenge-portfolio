@@ -1,6 +1,9 @@
 @use "../../../styles/variables";
 
 .holdings {
+  border-radius: variables.$border-radius-large variables.$border-radius-large 0
+    0;
+
   &__title {
     font-size: variables.$font-size-large;
   }
