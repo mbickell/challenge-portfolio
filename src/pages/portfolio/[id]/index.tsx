@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import NotFound from "./404";
 import { Header } from "@/components/header/header";
 import styles from "./index.module.scss";
+import { PortfolioHoldings } from "@/components/portfolioHolidings/portfolioHoldings";
 
 export const getServerSideProps: GetServerSideProps<{
   portfolio: Portfolio;
@@ -34,6 +35,7 @@ const PortfolioPage: React.FC<
   return (
     <main className={styles.portfolio}>
       <Header title={portfolio.name} valuation="£10,276.00" />
+      <PortfolioHoldings />
     </main>
   );
 };
