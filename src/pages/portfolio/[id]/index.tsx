@@ -3,6 +3,8 @@ import { Portfolio } from "@/models/portfolio";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { useRouter } from "next/router";
 import NotFound from "./404";
+import { Header } from "@/components/header/header";
+import styles from "./index.module.scss";
 
 export const getServerSideProps: GetServerSideProps<{
   portfolio: Portfolio;
@@ -29,7 +31,11 @@ const PortfolioPage: React.FC<
     return <NotFound id={router.query.id as string} />;
   }
 
-  return <h1>Hello {portfolio.name}</h1>;
+  return (
+    <main className={styles.portfolio}>
+      <Header title={portfolio.name} valuation="£10,276.00" />
+    </main>
+  );
 };
 
 export default PortfolioPage;
