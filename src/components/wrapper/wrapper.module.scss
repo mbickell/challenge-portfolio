@@ -6,11 +6,7 @@
   padding: variables.$spacing-large;
   width: 100%;
 
-  @include variables.tablet-query {
-    width: 90%;
-  }
-
   @include variables.desktop-query {
-    width: 75%;
+    max-width: 1024px;
   }
 }

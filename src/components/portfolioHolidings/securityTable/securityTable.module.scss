@@ -1,0 +1,49 @@
+@use "../../../styles/variables";
+
+.holdings {
+  border-radius: 0 0 variables.$border-radius-large
+    variables.$border-radius-large;
+  overflow-x: auto;
+
+  .table {
+    width: 100%;
+
+    &__heading {
+      text-align: left;
+      font-size: variables.$font-size-large;
+      min-width: 200px;
+      padding: variables.$spacing-medium 0;
+      border-bottom: 1px solid variables.$grey;
+
+      &--small {
+        min-width: 75px;
+        text-align: right;
+      }
+
+      &--medium {
+        min-width: 100px;
+        text-align: right;
+      }
+
+      &--large {
+        min-width: 250px;
+      }
+    }
+
+    &__data {
+      padding: variables.$spacing-medium 0;
+
+      &--right {
+        text-align: right;
+      }
+
+      &--positive {
+        color: variables.$positive;
+      }
+
+      &--negative {
+        color: variables.$negative;
+      }
+    }
+  }
+}

@@ -13,8 +13,6 @@ export const getServerSideProps: GetServerSideProps<{
   const res = await fetch(
     `${process.env.URL}/api/portfolio/${context.query.id}`,
   );
-  console.log(context.query.id);
-
   const portfolio = await res.json();
 
   return {
@@ -26,7 +24,6 @@ const PortfolioPage: React.FC<
   InferGetServerSidePropsType<typeof getServerSideProps>
 > = ({ portfolio }) => {
   const router = useRouter();
-  console.log(portfolio);
 
   if (!portfolio.id) {
     return <NotFound id={router.query.id as string} />;

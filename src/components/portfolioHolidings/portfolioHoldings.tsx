@@ -15,7 +15,7 @@ export const PortfolioHoldings: React.FC<IProps> = ({ holdings }) => {
     <section className={styles.container}>
       <Header holdingsNo={holdings.length || 0} />
       <Sectors sectors={getSectorsFromHoldings(holdings)} />
-      <SecurityTable />
+      <SecurityTable holdings={holdings} />
     </section>
   );
 };
