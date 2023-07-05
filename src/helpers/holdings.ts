@@ -5,11 +5,12 @@ export const formatNumber = (number: number | string) => {
     return number.toLocaleString();
   }
 
-  if (number.length <= 5) {
-    return `${number}`;
+  const [whole, decimal] = number.toString().split(".");
+
+  if (whole.length <= 3) {
+    return number;
   }
 
-  const [whole, decimal] = number.toString().split(".");
   const cleanedWhole = whole
     .split("")
     .reverse()
@@ -21,7 +22,7 @@ export const formatNumber = (number: number | string) => {
       return current + previous;
     });
 
-  return `${cleanedWhole}.${decimal || "00"}`;
+  return `${cleanedWhole || 0}.${decimal || "00"}`;
 };
 
 export const formatLastPrice = (number: number) =>
@@ -41,4 +42,4 @@ export const formatValuation = (number: number) =>
 export const getValuationFromHoldings = (holdings: SecurityHoldings[]) =>
   holdings
     .map((holding) => holding.lastPrice * holding.shares)
-    .reduce((a, b) => a + b);
+    .reduce((a, b) => a + b) / 100;
