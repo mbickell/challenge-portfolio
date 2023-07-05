@@ -1,5 +1,6 @@
 import * as React from "react";
 import styles from "./error.module.scss";
+import { Wrapper } from "../wrapper/wrapper";
 
 interface IProps {
   id: string;
@@ -9,14 +10,14 @@ interface IProps {
 export const Error: React.FC<IProps> = ({ id, message }) => {
   return (
     <main className={styles.container}>
-      <div className={styles.error}>
+      <Wrapper className={styles.error}>
         <h1 className={styles.error__type}>Portfolio not found</h1>
         <p className={styles.error__message}>
           {message
             ? message
             : `We apologise, but we could not locate a portfolio associated with the ID ${id}.`}
         </p>
-      </div>
+      </Wrapper>
     </main>
   );
 };

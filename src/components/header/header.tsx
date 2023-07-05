@@ -1,5 +1,6 @@
 import * as React from "react";
 import styles from "./header.module.scss";
+import { Wrapper } from "../wrapper/wrapper";
 
 interface IProps {
   title: string;
@@ -8,7 +9,7 @@ interface IProps {
 
 export const Header: React.FC<IProps> = ({ title, valuation }) => {
   return (
-    <header className={styles.header}>
+    <Wrapper className={styles.header}>
       <h1 className={styles.header__title}>{title}</h1>
       {valuation && (
         <div>
@@ -16,6 +17,6 @@ export const Header: React.FC<IProps> = ({ title, valuation }) => {
           <p className={styles.header__valuation}>{valuation}</p>
         </div>
       )}
-    </header>
+    </Wrapper>
   );
 };
