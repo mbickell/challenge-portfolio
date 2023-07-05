@@ -1,10 +1,11 @@
 @use "../../../styles/variables";
 
 .portfolio {
-  padding: variables.$spacing-small;
+  padding: variables.$spacing-medium;
   display: flex;
-  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  width: 100%;
 
   @include variables.tablet-query {
     padding: variables.$spacing-large;

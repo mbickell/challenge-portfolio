@@ -1,4 +1,7 @@
 @use "../../../styles/variables";
 
 .holdings {
+  &__title {
+    font-size: variables.$font-size-large;
+  }
 }
